@@ -1,0 +1,21 @@
+%h2= "User List"
+
+%table.table.text-center
+  %thead
+    %tr
+      %th= "Name:"
+      %th= "Age:"
+      %th= "City"
+      %th= "Show"
+      %th= "Edit"
+    %tr
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.name
+        %td= user.age
+        %td= user.city
+        %td
+          = link_to "Show", user_path(user)
+        %td
+          = link_to "Edit", edit_user_path(user)

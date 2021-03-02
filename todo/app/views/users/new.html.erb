@@ -1,0 +1,12 @@
+<%= form_with model: @user do |form| %>
+  <%= form.label :name_f, "Name" %>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :age_adult, "Age" %>
+  <%= form.text_field :age %>
+  <br>
+  <%= form.label :city_location, "City" %>
+  <%= form.text_field :city %>
+  <br>
+  <%= form.submit %>
+<% end %>
